@@ -43,9 +43,9 @@
 				<section>
 					<img style="border:0px" width="305" height="266" data-src="./imgs/docker.png">
                     <h3>Containers na prática</h3>
-					<p>
+					
 						<h2>e algo mais !!!</h2>
-					</p>                    
+					                    
 				</section>
 
 				<section>
@@ -229,7 +229,32 @@ lb:
                 <section>
                     <section data-background-image="./imgs/typing.gif" data-background-size="500px" data-background-repeat="repeat">
                         <h1><bold><font color="white">HANDS-ON</font></bold></h1><br>
-                        <h2><bold><font color="white">GIT clone<br>https://goo.gl/E02H0P</font></bold></h2><br>
+                    </section>
+                    <section>
+                        <p>Step-By-Step</p>
+                        <ul>
+                            <li class="fragment">docker-machine create --driver virtualbox Cargueiro</li>
+                            <li class="fragment">eval $(docker-machine env Cargueiro)</li>
+                            <li class="fragment">git clone https://github.com/juniorjbn/compose-scale</li>
+                            <li class="fragment">docker build -t docker001 .</li>
+                            <li class="fragment">docker run -d --name redis redis</li>
+                            <li class="fragment">docker run -it -p 80:80 --link redis:redis --name python_app docker001</li>
+                            <li class="fragment">Navegador 192.168.99.100</li>
+                            <li class="fragment">Como escalar essa aplicação ?</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <p>Um passo a frente</p>
+                        <ul>
+                            <li class="fragment">Analisar docker-compose.yml</li>
+                            <li class="fragment">docker-compose up --build</li>
+                            <li class="fragment">Editar /etc/hosts</li>
+                            <li class="fragment">Acessar teste.docker</li>
+                            <li class="fragment">F5 sem parar</li>
+                            <li class="fragment">docker-compose scale web=3</li>
+                            <li class="fragment">F5 sem parar, um olho nos hits e outro no hostname</li>
+                        </ul>    
+                            <img class="fragment" align="center" style="border:0px" height="300" data-src="./imgs/jordan.gif">
                     </section>
                 </section>
 				<section>
