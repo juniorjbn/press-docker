@@ -270,14 +270,11 @@ lb:
                         <p><img class="fragment" align="left" style="border:0px" height="200" data-src="./imgs/pray.gif">
                         Step-By-Step</p>
                         <ul>
-                            <li class="fragment">docker-machine create --driver virtualbox Cargueiro</li>
-                            <li class="fragment">docker-machine env Cargueiro</li>
-                            <li class="fragment">eval $(docker-machine env Cargueiro)</li>
                             <li class="fragment">git clone https://github.com/juniorjbn/compose-scale</li>
-                            <li class="fragment">docker build -t docker001 .</li>
+                            <li class="fragment">docker build -t docker1 .</li>
                             <li class="fragment">docker run -d --name redis redis</li>
-                            <li class="fragment">docker run -it -p 80:80 --link redis:redis --name python_app docker001</li>
-                            <li class="fragment">Navegador 192.168.99.100</li>
+                            <li class="fragment">docker run -it -p 80:80 --link redis:redis --name python_app docker1</li>
+                            <li class="fragment">Navegador ->> http://localhost</li>
                             <li class="fragment">Como escalar essa aplicação ?</li>
                         </ul>
                     </section>
@@ -285,7 +282,7 @@ lb:
                         <p>Um passo a frente</p>
                         <ul>
                             <li class="fragment">Analisar docker-compose.yml</li>
-                            <li class="fragment">docker-compose up --build</li>
+                            <li class="fragment">docker-compose up </li>
                             <li class="fragment">Editar /etc/hosts</li>
                             <li class="fragment">Acessar teste.docker</li>
                             <li class="fragment">F5 sem parar</li>
@@ -297,7 +294,7 @@ lb:
                 </section>
 				<section>
                     <h2>Dúvidas</h2>
-                    <img style="border:0px" width="650" data-src="./imgs/question.gif">
+                    <img class="fragment" style="border:0px" width="650" data-src="./imgs/question.gif">
                 </section>
                 <section>
                     <section>
