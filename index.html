@@ -159,6 +159,12 @@
                         </ul>
                     </section>
                     <section>
+                        <h3>Dockerfile de Exemplo</h3>
+                        <p><a href="https://raw.githubusercontent.com/jenkinsci/docker/2.0-previews/Dockerfile" target="_blank">Dockerfile</a></p>
+                        
+                        <p><a href="https://imagelayers.io/?images=jenkins:2.0" target="_blank">ImageLayers.IO</a></p>
+                    </section>
+                    <section>
                         <h3>Boas Práticas</h3>
                         <ul>
                             <li class="fragment">Não Instale Pacotes Desnecessários</li>
@@ -168,7 +174,7 @@
                             <li class="fragment">Não Mapear Porta Pública</li>
                             <li class="fragment">Deixe as Partes Dinâmicas Para o Fim</li>
                             <li class="fragment">Use TAGs</li>
-			    <li class="fragment">Execute apenas <b>1</b> processo por container</li>
+                            <li class="fragment">Execute apenas <b>1</b> processo por container</li>
                         </ul>
                     </section>
 				</section>
@@ -199,7 +205,24 @@
                         </ul>
                     </section>
 				</section>
-
+                <section>
+                    <section data-background-image="./imgs/monkey1.gif" data-background-size="500px" data-background-repeat="repeat">
+                        <h1><bold><font color="white">HANDS-ON 1</font></bold></h1><br>
+                    </section>
+                    <section>
+                        <p><img class="fragment" align="left" style="border:0px" height="200" data-src="./imgs/pray.gif">
+                        Step-By-Step</p>
+                        <ul>
+                            <li class="fragment">git clone https://github.com/juniorjbn/compose-scale</li>
+                            <li class="fragment">docker build -t docker1 .</li>
+                            <li class="fragment">docker run -d --name redis redis</li>
+                            <li class="fragment">docker run -it -p 80:80 --link redis:redis --name python_app docker1</li>
+                            <li class="fragment">Navegador ->> http://localhost</li>
+                            <li class="fragment">Como escalar essa aplicação ?</li>
+                        </ul>
+                    </section>
+                </section>
+                
 				<section>
                     <h2>Volumes</h2>
                         <ul>
@@ -264,19 +287,7 @@ lb:
                 </section>
                 <section>
                     <section data-background-image="./imgs/typing.gif" data-background-size="500px" data-background-repeat="repeat">
-                        <h1><bold><font color="white">HANDS-ON</font></bold></h1><br>
-                    </section>
-                    <section>
-                        <p><img class="fragment" align="left" style="border:0px" height="200" data-src="./imgs/pray.gif">
-                        Step-By-Step</p>
-                        <ul>
-                            <li class="fragment">git clone https://github.com/juniorjbn/compose-scale</li>
-                            <li class="fragment">docker build -t docker1 .</li>
-                            <li class="fragment">docker run -d --name redis redis</li>
-                            <li class="fragment">docker run -it -p 80:80 --link redis:redis --name python_app docker1</li>
-                            <li class="fragment">Navegador ->> http://localhost</li>
-                            <li class="fragment">Como escalar essa aplicação ?</li>
-                        </ul>
+                        <h1><bold><font color="white">HANDS-ON 2</font></bold></h1><br>
                     </section>
                     <section>
                         <p>Um passo a frente</p>
